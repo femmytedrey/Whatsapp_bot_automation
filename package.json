@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-auto-reseller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx dm_test.ts",
+    "dev": "tsx dm_test.ts",
+    "build": "tsc",
+    "start": "node dist/dm_test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.24",
+    "@types/qrcode-terminal": "^0.12.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
