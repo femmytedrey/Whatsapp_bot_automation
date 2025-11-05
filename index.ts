@@ -12,13 +12,31 @@ import {
 } from "./config/static.config";
 import { calculateProfitInfo, isValidGadgetStatus, stats } from "./lib/helpers";
 
+// const client = new Client({
+//   authStrategy: new LocalAuth({ dataPath: "./session" }),
+//   puppeteer: {
+//     headless: false,
+//     args: ["--no-sandbox", "--disable-setuid-sandbox"],
+//   },
+// });
+
 const client = new Client({
-  authStrategy: new LocalAuth({ dataPath: "./session" }),
+  authStrategy: new LocalAuth(),
   puppeteer: {
-    headless: false,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    headless: true,
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--single-process",
+      "--disable-gpu",
+    ],
   },
 });
+
 
 const parser = new PriceParser(MARKUP_PERCENT);
 const gadgetFilter = new GadgetFilter();
