@@ -2,12 +2,11 @@
   "name": "whatsapp-auto-reseller",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dm_test.ts",
   "scripts": {
-    "test": "tsx dm_test.ts",
     "dev": "tsx dm_test.ts",
-    "build": "tsc",
-    "start": "npm run build && node dist/dm_test.js"
+    "start": "tsx dm_test.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
