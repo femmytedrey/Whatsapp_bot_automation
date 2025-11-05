@@ -46,6 +46,7 @@ export function calculateProfitInfo(
   profit: number;
   priceInfo: string;
 } {
+  
   const newCaption = parser.replacePrice(caption);
   const originalPrice = parser.parsePrice(caption);
 
