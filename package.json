@@ -2,10 +2,10 @@
   "name": "whatsapp-auto-reseller",
   "version": "1.0.0",
   "description": "",
-  "main": "dm_test.ts",
+  "main": "index.ts",
   "scripts": {
-    "dev": "tsx dm_test.ts",
-    "start": "tsx dm_test.ts",
+    "dev": "tsx index.ts",
+    "start": "tsx index.ts",
     "build": "tsc"
   },
   "keywords": [],
