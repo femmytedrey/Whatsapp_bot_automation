@@ -186,10 +186,12 @@ client.on("message_create", async (msg) => {
   }
 });
 
-client.on("qr", (qr: string) => {
-  console.log("📱 Scan this QR code with your SECONDARY WhatsApp:");
+client.on("qr", (qr) => {
+  // 1️⃣ Console QR (terminal version)
   qrcode.generate(qr, { small: true });
-  console.log("(The one that will monitor the vendor)\n");
+
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qr)}`;
+  console.log(`\n👉 Scan your QR code here: ${qrUrl}\n`);
 });
 
 client.on("authenticated", () => console.log("✅ Authenticated!"));
